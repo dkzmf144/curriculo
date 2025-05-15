@@ -1,11 +1,12 @@
 function showSection(id) {
-  const sections = document.querySelectorAll("main section");
-  sections.forEach((section) => {
+  document.querySelectorAll("section").forEach((section) => {
     section.classList.remove("active");
   });
   document.getElementById(id).classList.add("active");
 }
 
 function enviarMensagem() {
-  alert("Mensagem enviada com sucesso! (Função simulada em JavaScript)");
+  alert(
+    "Função de envio de mensagem acionada! Aqui poderia ir para o WhatsApp ou Gmail real."
+  );
 }
