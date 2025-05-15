@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currículo - Isaque Pereira Alcantara</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Isaque Pereira Alcantara</h1>
+      <p>Desenvolvedor Iniciante • HTML | CSS | JavaScript</p>
+    </header>
+
+    <nav>
+      <button onclick="showSection('sobre')">Sobre</button>
+      <button onclick="showSection('habilidades')">Habilidades</button>
+      <button onclick="showSection('experiencia')">Experiência</button>
+      <button onclick="showSection('contato')">Contato</button>
+    </nav>
+
+    <main>
+      <section id="sobre" class="active">
+        <h2>Sobre Mim</h2>
+        <p>
+          Olá! Meu nome é Isaque Pereira Alcantara, nascido em 24 de abril de
+          2007. Estou estudando Desenvolvimento de Sistemas e sou apaixonado por
+          tecnologia e programação.
+        </p>
+      </section>
+
+      <section id="habilidades">
+        <h2>Habilidades</h2>
+        <ul>
+          <li>HTML e CSS - Intermediário</li>
+          <li>JavaScript - Básico</li>
+          <li>Lógica de Programação</li>
+          <li>PowerShell e Terminal</li>
+        </ul>
+      </section>
+
+      <section id="experiencia">
+        <h2>Experiência / Projetos</h2>
+        <p>
+          Trabalhos e projetos pessoais como sistemas de login com Node.js,
+          sites de vendas com design criativo e sistemas de cadastro com backend
+          funcional.
+        </p>
+      </section>
+
+      <section id="contato">
+        <h2>Contato</h2>
+        <p>Email: isaque@example.com</p>
+        <p>WhatsApp: (11) 9XXXX-XXXX</p>
+        <button onclick="enviarMensagem()">Enviar Mensagem</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Isaque Pereira Alcantara</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
