@@ -1,103 +1,144 @@
-body {
+/* Fonte e reset básico */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #4e54c8, #8f94fb);
-  color: #fff;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .container {
+  background: #1e293b;
   max-width: 900px;
-  margin: auto;
-  padding: 2rem;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
 }
 
 header {
+  padding: 30px;
   text-align: center;
-  padding: 2rem 0;
+  background: #273c75;
 }
 
-.subtitle {
+header h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 5px;
+  color: #f5f6fa;
+}
+
+header .subtitle {
   font-weight: 300;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  color: #dcdde1;
+}
+
+nav {
+  background: #192a56;
 }
 
 nav ul {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-around;
   list-style: none;
-  padding: 0;
 }
 
-nav li {
+nav ul li {
+  padding: 15px 0;
   cursor: pointer;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  transition: background 0.3s;
+  font-weight: 600;
+  color: #a5b1c2;
+  transition: color 0.3s ease;
+  user-select: none;
 }
 
-nav li:hover {
-  background: rgba(255, 255, 255, 0.2);
+nav ul li:hover,
+nav ul li.active {
+  color: #70a1ff;
+  border-bottom: 3px solid #70a1ff;
 }
 
 main {
-  margin-top: 2rem;
+  padding: 30px;
 }
 
 section {
   display: none;
+  animation: fadeIn 0.6s ease forwards;
 }
 
 section.active {
   display: block;
-  animation: fadeIn 0.5s ease-in-out;
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  margin-top: 1rem;
+  background: #273c75;
+  border-radius: 10px;
+  padding: 20px;
+  line-height: 1.6;
+  font-size: 1rem;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
 }
 
 .card ul {
-  padding-left: 1.2rem;
+  list-style: inside disc;
 }
 
-.card li {
-  margin-bottom: 0.5rem;
+.card ul li {
+  margin-bottom: 12px;
+}
+
+a {
+  color: #70a1ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 button {
-  background-color: #ffffff22;
+  margin-top: 15px;
+  background: #70a1ff;
   border: none;
-  padding: 0.7rem 1.2rem;
-  color: white;
-  border-radius: 10px;
+  padding: 12px 25px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s;
-  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+  user-select: none;
 }
 
 button:hover {
-  background-color: #ffffff44;
+  background: #1e90ff;
 }
 
 footer {
   text-align: center;
-  padding: 2rem 0;
+  padding: 15px;
   font-size: 0.9rem;
-  opacity: 0.8;
+  color: #a5b1c2;
+  background: #192a56;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(15px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
